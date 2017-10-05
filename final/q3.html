@@ -1,0 +1,23 @@
+<html>
+
+<head>
+ <script type="text/javascript">
+	function f () {
+		document.getElementById('picture').src = "pic2.jpeg"
+	}
+	function g () {
+		document.getElementById('picture').src = "pic1.jpeg"
+	}
+ </script>
+</head>
+
+<body>
+<h2>
+	Hover over the image to see another one
+</h2>
+			<image id = 'picture' src = 'pic1.jpeg' onmouseover="f()" onmouseout="g()" width = 50%>
+
+</body>
+
+
+</html>
