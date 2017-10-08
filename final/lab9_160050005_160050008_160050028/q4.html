@@ -1,0 +1,32 @@
+<html>
+	<body>
+	<script type="text/javascript">
+function errorhandler (msg, url, line) {
+		alert ("Message:" + msg)
+				alert ("url:" + url)
+						alert ("line:" + line)
+							}
+								window.onerror = errorhandler
+
+function validate_fileupload(fileName)
+{
+    var allowed_extension = "txt";
+	    var file_extension = fileName.split('.').pop(); 
+	if (allowed_extension == file_extension){
+		return;
+}
+else
+{
+	alert("The file you have selected is not a text file!")
+	return false;
+}
+}
+	</script>
+
+	<form action="process.php" method="post">
+	<input type="file" name="fileUpload"  >
+<input type="submit" value="Find Frequency" onclick="return validate_fileupload(this.value)">
+	</form>
+	</body>
+</html>
+

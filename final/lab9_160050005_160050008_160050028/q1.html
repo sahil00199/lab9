@@ -1,0 +1,51 @@
+<html>
+
+<head>
+<script type="text/javascript">
+		function errorhandler (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+		window.onerror = errorhandler
+		function f() {
+		elem2 = document.forms["form1"]["given"];
+		num=  String (elem2.value)
+		var num2 = num.split("").reverse().join("")
+		if (num2 == num)
+			document.write("the given string is a palindrome")
+		else
+			document.write("the given string is not a palindrome")
+	}
+
+</script>
+<link rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Elsie Swash Caps">
+
+</head>
+<style>
+body, html {
+    height: 100%;
+    background-color: #ace600;
+    margin: 50;
+}
+form{
+  background-color: #66d9ff;
+  font-family: 'Elsie Swash Caps', serif;
+        font-size: 20px;
+}
+</style>
+
+<body>
+<center>
+	<form name="form1" onsubmit="f();return false;">
+		<font style="color:red;">Please provide the string:</font><br>
+		<input type="text" name="given">
+		
+		<input type="submit" value="Check Palindrome!"> 
+	</form>
+</center>
+</body>
+
+
+</html>

@@ -1,0 +1,64 @@
+<html>
+
+<head>
+	<script type="text/javascript">
+function errorhandler (msg, url, line) {
+		alert ("Message:" + msg)
+		alert ("url:" + url)
+		alert ("line:" + line)
+	}
+	window.onerror = errorhandler
+	function compare(a, b){return a-b}
+	function g(){
+	 	frm = document.getElementById("form2");
+	 	document.write("<h2>The elements in ascending order are as follows:</h2>")
+		//document.write("Displaying elements in sorted order")
+		data = []
+		for (i=0;i<frm.length - 1;i++)
+		{
+			data.push(Number(frm.elements[i].value))
+		} 
+		data.sort(compare)
+		for (i=0;i<frm.length-1;i++)
+		{
+			document.write(data[i] + "<br>")
+		}
+	}
+	function f() {
+		elem1 = document.forms["form1"]["N"];
+		x=  Number (elem1.value)
+		// document.write("<form name='form2' onsubmit='g();return false;'>")
+		// document.write("Number"+": <br>	 <input type='text' name='N1'>	<br>")
+		// document.write("<input type='submit' value='Generate output'> </form>")
+		// document.write("<form name='form2' onsubmit='g();return false;'>")
+		// 	for(i=1;i<x+1;i++)
+		// 		{
+		// 			document.write("Number"+i+": <br>	 <input type='text' name='N1'>	<br>")
+		// 		}
+		// 	document.write("<input type='submit' value='Generate output'> </form>")
+			for (i=1;i<x+1;i++)
+			{
+				document.getElementById('form2').innerHTML=document.getElementById('form2').innerHTML + "Number"+i+": <br>	 <input type='text' name='N1'>	<br>"
+			}
+			document.getElementById('form2').innerHTML=document.getElementById('form2').innerHTML + "<input type='submit' value='Generate output'> </form>"
+	}
+
+</script>
+</head>
+<body>
+	<form name="form1" onsubmit="f();return false;">
+		Number of terms: <br>
+		 <input type="text" name="N">
+		<br>
+		<input type="submit" value="Generate form"> 
+	</form>
+
+	<form id="form2" name="form2" onsubmit="g();return false;">
+
+	</form>
+
+
+</body>
+
+
+</html>

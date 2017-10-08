@@ -1,0 +1,12 @@
+The contributions are as follows:
+Question1 - 160050005, 160050008, 160050028
+Question2 - 160050005, 160050008, 160050028
+Question3 - 160050005, 160050008, 160050028
+
+The code for question 1 and question 2 has been uploaded on the mars server and can be directly checked using the following urls (respectively):
+https://www.cse.iitb.ac.in/~amanb/p1/index.php
+https://www.cse.iitb.ac.in/~amanb/p2/index.php
+
+CITATIONS:
+1. https://stackoverflow.com/questions/4416505/how-to-take-keyboard-input-in-javascript : to find out how to use button events to execute javascript functions
+2. https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp : to find out how to deactivate a button using javascript
