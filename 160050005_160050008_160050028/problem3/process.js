@@ -31,6 +31,11 @@ function solving()
   document.getElementById("buttn").disabled = true
 }
 
+function refresh()
+{
+  location.reload()
+}
+
 function up()
 {
     if (parseInt(id_empty) > 3)
