@@ -10,3 +10,5 @@ https://www.cse.iitb.ac.in/~amanb/p2/index.php
 CITATIONS:
 1. https://stackoverflow.com/questions/4416505/how-to-take-keyboard-input-in-javascript : to find out how to use button events to execute javascript functions
 2. https://www.w3schools.com/jsref/prop_pushbutton_disabled.asp : to find out how to deactivate a button using javascript
+3. https://stackoverflow.com/questions/8669579/multiple-files-select-and-upload
+4. https://stackoverflow.com/questions/13138498/php-session-validation
