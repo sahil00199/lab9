@@ -5,18 +5,16 @@
       }
     $target_dir = "./images/";
     $uploadOk=1;
-    $total = count($_FILES['fileToUpload']['name']);
-    if ($total >10){
+    $totalnumber = count($_FILES['fileToUpload']['name']);
+    if ($totalnumber >10){
         $uploadOk=0;
         echo "Can't upload more than 10 files at a time <br>";
     }
-    // Loop through each file
-    for($i=0; $i<$total && $uploadOk!=0; $i++) {
-        //Get the temp file path
+    for($i=0; $uploadOk!=0 && $i<$totalnumber; $i++) {
         $tmpFilePath = $_FILES['fileToUpload']['tmp_name'][$i];
         $target_file = $target_dir . $_FILES['fileToUpload']['name'][$i];
-        $imageFileType = pathinfo($target_file,PATHINFO_EXTENSION);
-        if($imageFileType != "jpg" && $uploadOk!=0) {
+        $imageExtension = pathinfo($target_file,PATHINFO_EXTENSION);
+        if($imageExtension != "jpg" && $uploadOk!=0) {
             echo "Sorry, only JPG files are allowed. ".$target_file." is not .jpg file <br>";
             $uploadOk = 0;
         }
