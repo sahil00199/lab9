@@ -1,10 +1,7 @@
 <?php
     session_start();
     if ($_SESSION["user"] != "eval"){
-        echo "<script> alert('Please login'); </script>";
-      echo '<script type="text/javascript">
-      window.location = "index.php"
-      </script>';
+        echo "<script> alert('Please login'); </script> <script type='text/javascript'> window.location = 'index.php' </script>";
       }
     $target_dir = "./images/";
     $uploadOk=1;

@@ -1,5 +1,8 @@
 <?php
 session_start();
+    if ($_SESSION["user"] != "eval"){
+        echo "<script> alert('Please login'); </script> <script type='text/javascript'> window.location = 'index.php' </script>";
+      }
 $images = glob('images/*.jpg');
 ?>
 <html>
