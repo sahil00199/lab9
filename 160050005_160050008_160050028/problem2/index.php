@@ -21,6 +21,18 @@ function formdisplay(id) {
 
 }
 
+// function changeradioother(io1,io2,io3,io4,id1,id2,id3,id4){
+//  var other1= document.getElementById(io1);
+//     other1.value=document.getElementById(id1).value;
+//  var other2= document.getElementById(io2);
+//     other2.value=document.getElementById(id2).value;
+//  var other3= document.getElementById(io3);
+//     other3.value=document.getElementById(id3).value;
+//  var other4= document.getElementById(io4);
+//     other4.value=document.getElementById(id4).value;
+ 
+// }
+
 </script>
 <body>
 
