@@ -5,20 +5,25 @@
       }
     $target_dir = "./images/";
     $uploadOk=1;
-    $totalnumber = count($_FILES['fileToUpload']['name']);
-    if ($totalnumber >10){
-        $uploadOk=0;
-        echo "Can't upload more than 10 files at a time <br>";
+    $filecount = 0;
+    $files = glob($target_dir . "*");
+    if ($files){
+    $filecount = count($files);
     }
-    for($i=0; $uploadOk!=0 && $i<$totalnumber; $i++) {
-        $tmpFilePath = $_FILES['fileToUpload']['tmp_name'][$i];
-        $target_file = $target_dir . $_FILES['fileToUpload']['name'][$i];
+    if ($filecount > 12)
+    {
+        echo "There are $filecount files in the directory... more than 10 files are not allowed";
+         $uploadOk=0;
+     }
+    $totalnumber = $_FILES['fileToUpload']['name'];
+        $tmpFilePath = $_FILES['fileToUpload']['tmp_name'];
+        $target_file = $target_dir . $_FILES['fileToUpload']['name'];
         $imageExtension = pathinfo($target_file,PATHINFO_EXTENSION);
         if($imageExtension != "jpg" && $uploadOk!=0) {
             echo "Sorry, only JPG files are allowed. ".$target_file." is not .jpg file <br>";
             $uploadOk = 0;
         }
-        if ($_FILES["fileToUpload"]["size"][$i] > 204800 && $uploadOk !=0) {
+        if ($_FILES["fileToUpload"]["size"] > 204800 && $uploadOk !=0) {
             echo "Sorry, the file ".$target_file." is too large <br>";
             $uploadOk = 0;
         }
@@ -31,7 +36,6 @@
             }
         }
         $uploadOk=1;
-    }
 ?>
 <form action="new_upload.php" 
       method="post" 

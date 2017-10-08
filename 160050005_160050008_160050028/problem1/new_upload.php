@@ -32,7 +32,7 @@
 </script>
 <form action="upload.php" method="post" enctype="multipart/form-data">
 	Select image to upload:
-	<input type="file" name="fileToUpload[]" id="fileToUpload" multiple="multiple" onchange= "validate_extension(this.value);"/>
+	<input type="file" name="fileToUpload" id="fileToUpload"onchange= "validate_extension(this.value);"/>
 	<input type="submit" value="Upload File" name="submit">
 </form><br><Br>
 <form action="album.php" 
